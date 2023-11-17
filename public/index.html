@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./font6/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@400;600;800&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <script defer type="text/javascript" src="http://localhost:4000/socket.io/socket.io.js"></script>
+    <script defer type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="selection-box">
+            <div class="selection-title">
+                Chat Room
+            </div>
+            <div id="user-form">
+                <input type="text" id="user-name" placeholder="Your Name">
+                <div class="buttons">
+                    <div class="active btn" id="connect-btn" onclick="newUser()">Connect</div>
+                    <div class="deactive btn" id="disconnect-btn" onclick="leaveChat()">Disconnect</div>
+                </div>
+            </div>
+            <div id="users-list">
+                <div class="list-title">No Users...</div>
+            </div>
+        </div>
+        <div class="message-box">
+            <div class="message-title">
+                Messages
+            </div>
+            <div id="message-container">
+                
+            </div>
+            <div id="main-form">
+                <input type="text" id="message" placeholder="Enter your message">
+                <div class="deactive btn" id="submit-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

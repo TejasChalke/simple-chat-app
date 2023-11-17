@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --border-color: #dddddd;
+    --secondary-color: #6759e8;
+    --bg-color: #0201169a;
+    --bg-secondary: #251b3c;
+    font-family: 'Ubuntu', 'Trispace', 'Ubuntu', sans-serif;;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: url(./images/bg1.jpg);
+}
+
+.main-container{
+    height: 90vh;
+    width: 90vw;
+    display: grid;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+    grid-template-columns: 30% 1fr;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+}
+
+.btn{
+    font-size: 1rem;
+    padding: .25rem .5rem;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    transition: all 200ms ease-in-out;
+    user-select: none;
+}
+
+.btn.deactive{
+    background-color: rgb(167, 167, 167);
+    cursor: not-allowed;
+}
+
+.btn.active:hover, .btn.active:focus{
+    background-color: var(--secondary-color);
+}
+
+/* End of outer design */
+
+
+/* User sign in */
+
+.selection-box{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--bg-secondary);
+}
+
+.selection-title{
+    height: 5rem;
+    width: 100%;
+    display: grid;
+    text-transform: capitalize;
+    place-items: center;
+    font-size: 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#user-form{
+    padding: 0rem 1rem;
+    padding-top: .5rem;
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#user-form > input{
+    width: 100%;
+    height: 2rem;
+    padding: 0rem .5rem;
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 1rem;
+    user-select: none;
+}
+
+#users-list{
+    overflow-y: auto;
+    width: 100%;
+    user-select: none;
+}
+
+
+.list-name, .list-title{
+    width: 100%;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    padding: .5rem 1rem;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list-logo{
+    margin: 0 1rem;
+    color: red;
+}
+
+.list-logo.active{
+    color: green;
+}
+
+
+/* End of user sign in */
+
+/* Message container */
+
+.message-title{
+    width: 100%;
+    height: 5.1rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    color: white;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.message-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+#message-container{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+}
+
+#message-container::-webkit-scrollbar{
+    display: none;
+}
+
+.received{
+    width: max-content;
+    height: 7%;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--border-color);
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.35);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.35);
+}
+
+.received.mine{
+    margin-left: auto;
+    margin-right: 1rem;
+    background-color: var(--secondary-color);
+}
+
+.message-date{
+    position: absolute;
+    width: max-content;
+    top: -1rem;
+    left: 0;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.message-date.mine{
+    left: auto;
+    right: 0;
+}
+
+.user-name{
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+#main-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 2rem;
+    margin-bottom: .5rem;
+}
+
+#main-form > input{
+    width: 90%;
+    height: 2.5rem;
+    padding: 0rem .5rem;
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+
+
+/* End of message container */
